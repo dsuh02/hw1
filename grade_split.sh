@@ -53,7 +53,7 @@ do
 done
 echo "The following tests failed: ${FAILED_TESTS}"
 echo "The following tests failed valgrind: ${VFAILED_TESTS}"
-S="max(100*($PASSED/$TOTAL - 0.5*($TOTAL-$VPASSED)/$TOTAL),0)"
+S="max(100*(1.0*$PASSED/$TOTAL - 0.5*($TOTAL-$VPASSED)/$TOTAL),0)"
 SCORE=`python -c "print(round($S,2))"`
 echo "Score = $S = $SCORE"
 echo "AUTO:T$TOTAL:P$PASSED:V$VPASSED:$SCORE"
